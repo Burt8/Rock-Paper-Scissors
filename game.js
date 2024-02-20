@@ -5,14 +5,22 @@ function rng() {
 
 function getComputerChoice() {
     let result = rng()
-    console.log(result)
+
     if (result <= 33) {
         return("Rock");
     } else if (result >= 34 && result <= 66) {
-        return("Paper")
+        return("Paper");
     } else if (result >= 67) {
-        return("Scissors")
+        return("Scissors");
     }
 }
 
-console.log(getComputerChoice())
+function gamePlay(playerSelection,computerSelection) {
+    if (playerSelection === "Paper" && computerSelection ==="Rock") {
+        return("You Win! Paper beats Rock!")
+    } else if (playerSelection === "Paper" && computerSelection === "Paper") {
+        return("Tie!")
+    } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+        return("You Lose! Scissors beat Paper!")
+    }
+}
