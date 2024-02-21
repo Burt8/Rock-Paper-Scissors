@@ -1,10 +1,5 @@
-function rng() {
-        let result = Math.floor(Math.random() * 100) + 1;
-        return result 
-    }
-
 function getComputerChoice() {
-    let result = rng()
+    let result = Math.floor(Math.random() * 100 + 1)
 
     if (result <= 33) {
         return("Rock");
@@ -17,7 +12,7 @@ function getComputerChoice() {
 
 function gamePlay(playerSelection,computerSelection) {
     if (playerSelection === "Paper" && computerSelection ==="Rock") {
-        return("You Win! Paper beats Rock!")
+        return("You Win! Paper beats Rock!");
     } else if (playerSelection === "Paper" && computerSelection === "Paper") {
         return("Tie! Paper Paper!")
     } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
