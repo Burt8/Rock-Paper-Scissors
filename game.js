@@ -45,19 +45,7 @@ function playGame() {
     let playerSelection = prompt("Type Rock, Paper, or Scissors to play!")
     let computerSelection = getComputerChoice()
     console.log(gamePlay(playerSelection,computerSelection));
-    playerSelection = prompt("Type Rock, Paper, or Scissors to play!");
-    computerSelection = getComputerChoice();
-    console.log(gamePlay(playerSelection,computerSelection));
-    playerSelection = prompt("Type Rock, Paper, or Scissors to play!");
-    computerSelection = getComputerChoice();
-    console.log(gamePlay(playerSelection,computerSelection));
-    playerSelection = prompt("Type Rock, Paper, or Scissors to play!");
-    computerSelection = getComputerChoice();
-    console.log(gamePlay(playerSelection,computerSelection));
-    playerSelection = prompt("Type Rock, Paper, or Scissors to play!");
-    computerSelection = getComputerChoice();
-    console.log(gamePlay(playerSelection,computerSelection));
- 
+
     if (playerScore > computerScore) {
      console.log("You Won!")
     } else (console.log("You Lost!"))
