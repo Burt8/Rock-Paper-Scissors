@@ -10,7 +10,8 @@ function getComputerChoice() {
     }
 }
 
-function gamePlay(playerSelection,computerSelection) {
+function gamePlay(playerSelection) {
+    let computerSelection = getComputerChoice()
     if (playerSelection === "Paper" && computerSelection ==="Rock") {
         console.log("You Win! Paper beats Rock!");
         return(++playerScore)
@@ -39,6 +40,10 @@ function gamePlay(playerSelection,computerSelection) {
 }
 
 let rock = document.querySelector(".Rock");
+rock.onclick = () => {
+    let playerSelection = "Rock"
+    gamePlay(playerSelection)
+}
 let paper = document.querySelector(".Paper");
 let scissors = document.querySelector(".Scissors");
 
