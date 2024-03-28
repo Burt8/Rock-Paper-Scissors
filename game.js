@@ -38,6 +38,10 @@ function gamePlay(playerSelection,computerSelection) {
     }
 }
 
+let rock = document.querySelector(".Rock");
+let paper = document.querySelector(".Paper");
+let scissors = document.querySelector(".Scissors");
+
 let playerScore = 0
 let computerScore = 0
 
