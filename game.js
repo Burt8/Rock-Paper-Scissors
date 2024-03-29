@@ -1,3 +1,22 @@
+
+let rock = document.querySelector(".Rock");
+rock.onclick = () => {
+    let playerSelection = "Rock"
+    gamePlay(playerSelection)
+}
+let paper = document.querySelector(".Paper");
+paper.onclick = () => {
+    let playerSelection = "Paper"
+    gamePlay(playerSelection)
+}
+let scissors = document.querySelector(".Scissors");
+scissors.onclick = () => {
+    let playerSelection = "Scissors"
+    gamePlay(playerSelection)
+}
+
+let results = document.querySelector(".results");
+
 function getComputerChoice() {
     let result = Math.floor(Math.random() * 100 + 1)
 
@@ -37,22 +56,6 @@ function gamePlay(playerSelection) {
         console.log("You Win! Scissors beat Paper!");
         return(++playerScore)
     }
-}
-
-let rock = document.querySelector(".Rock");
-rock.onclick = () => {
-    let playerSelection = "Rock"
-    gamePlay(playerSelection)
-}
-let paper = document.querySelector(".Paper");
-paper.onclick = () => {
-    let playerSelection = "Paper"
-    gamePlay(playerSelection)
-}
-let scissors = document.querySelector(".Scissors");
-scissors.onclick = () => {
-    let playerSelection = "Scissors"
-    gamePlay(playerSelection)
 }
 
 let playerScore = 0
