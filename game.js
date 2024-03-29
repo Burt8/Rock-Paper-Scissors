@@ -45,7 +45,15 @@ rock.onclick = () => {
     gamePlay(playerSelection)
 }
 let paper = document.querySelector(".Paper");
+paper.onclick = () => {
+    let playerSelection = "Paper"
+    gamePlay(playerSelection)
+}
 let scissors = document.querySelector(".Scissors");
+scissors.onclick = () => {
+    let playerSelection = "Scissors"
+    gamePlay(playerSelection)
+}
 
 let playerScore = 0
 let computerScore = 0
