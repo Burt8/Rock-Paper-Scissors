@@ -17,6 +17,7 @@ scissors.onclick = () => {
     gamePlay(playerSelection)
 }
 
+
 function getComputerChoice() {
     let result = Math.floor(Math.random() * 100 + 1)
 
@@ -61,12 +62,12 @@ function gamePlay(playerSelection) {
 let playerScore = 0
 let computerScore = 0
 
-button.onclick = () => {
-    for (let round = 0; round < 5; round++) {
-        gamePlay(playerSelection)
-    }
+function playGame() {
+    let playerSelection = prompt("Type Rock, Paper, or Scissors to play!")
+    let computerSelection = getComputerChoice()
+    console.log(gamePlay(playerSelection,computerSelection));
 
     if (playerScore > computerScore) {
-     results.textContext = "You Won!"
-    } else results.textContext = "You Lost!"
+     console.log("You Won!")
+    } else (console.log("You Lost!"))
  }
