@@ -1,3 +1,5 @@
+let button = document.querySelector("button")
+const results = document.querySelector(".results");
 
 let rock = document.querySelector(".Rock");
 rock.onclick = () => {
@@ -14,8 +16,6 @@ scissors.onclick = () => {
     let playerSelection = "Scissors"
     gamePlay(playerSelection)
 }
-
-const results = document.querySelector(".results");
 
 function getComputerChoice() {
     let result = Math.floor(Math.random() * 100 + 1)
@@ -61,12 +61,12 @@ function gamePlay(playerSelection) {
 let playerScore = 0
 let computerScore = 0
 
-function playGame() {
-    let playerSelection = prompt("Type Rock, Paper, or Scissors to play!")
-    let computerSelection = getComputerChoice()
-    console.log(gamePlay(playerSelection,computerSelection));
+button.onclick = () => {
+    for (let round = 0; round < 5; round++) {
+        gamePlay(playerSelection)
+    }
 
     if (playerScore > computerScore) {
-     console.log("You Won!")
-    } else (console.log("You Lost!"))
+     results.textContext = "You Won!"
+    } else results.textContext = "You Lost!"
  }
