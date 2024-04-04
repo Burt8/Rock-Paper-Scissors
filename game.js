@@ -62,6 +62,8 @@ function gamePlay(playerSelection) {
 let playerScore = 0
 let computerScore = 0
 
+score.textContent = "Player: " + playerScore + " Computer: " + computerScore;
+
 function playGame() {
     let playerSelection = prompt("Type Rock, Paper, or Scissors to play!")
     let computerSelection = getComputerChoice()
