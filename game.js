@@ -57,19 +57,9 @@ function gamePlay(playerSelection) {
         results.textContent = "You Win! Scissors beat Paper!";
         return(++playerScore)
     }
-}
+};
 
-let playerScore = 0
-let computerScore = 0
+let playerScore = 0;
+let computerScore = 0;
 
 score.textContent = "Player: " + playerScore + " Computer: " + computerScore;
-
-function playGame() {
-    let playerSelection = prompt("Type Rock, Paper, or Scissors to play!")
-    let computerSelection = getComputerChoice()
-    console.log(gamePlay(playerSelection,computerSelection));
-
-    if (playerScore > computerScore) {
-     console.log("You Won!")
-    } else (console.log("You Lost!"))
- }
