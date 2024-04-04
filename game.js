@@ -1,4 +1,4 @@
-let button = document.querySelector("button")
+const score = document.querySelector(".score");
 const results = document.querySelector(".results");
 
 let rock = document.querySelector(".Rock");
