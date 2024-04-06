@@ -4,17 +4,17 @@ const results = document.querySelector(".results");
 let rock = document.querySelector(".Rock");
 rock.onclick = () => {
     let playerSelection = "Rock"
-    playRound(playerSelection)
+    playGame(playerSelection)
 }
 let paper = document.querySelector(".Paper");
 paper.onclick = () => {
     let playerSelection = "Paper"
-    playRound(playerSelection)
+    playGame(playerSelection)
 }
 let scissors = document.querySelector(".Scissors");
 scissors.onclick = () => {
     let playerSelection = "Scissors"
-    playRound(playerSelection)
+    playGame(playerSelection)
 }
 
 
@@ -63,3 +63,13 @@ let playerScore = 0;
 let computerScore = 0;
 
 score.textContent = "Player: " + playerScore + " Computer: " + computerScore;
+
+function playGame(playerSelection) {
+    playRound(playerSelection);
+    score.textContent = "Player: " + playerScore + " Computer: " + computerScore;
+    if (playerScore === 5) {
+        score.textContent = "You Win!"
+    } else if (computerScore === 5) {
+        score.textContent = "You Lost"
+    }
+};
