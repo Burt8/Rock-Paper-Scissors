@@ -4,17 +4,17 @@ const results = document.querySelector(".results");
 let rock = document.querySelector(".Rock");
 rock.onclick = () => {
     let playerSelection = "Rock"
-    gamePlay(playerSelection)
+    playRound(playerSelection)
 }
 let paper = document.querySelector(".Paper");
 paper.onclick = () => {
     let playerSelection = "Paper"
-    gamePlay(playerSelection)
+    playRound(playerSelection)
 }
 let scissors = document.querySelector(".Scissors");
 scissors.onclick = () => {
     let playerSelection = "Scissors"
-    gamePlay(playerSelection)
+    playRound(playerSelection)
 }
 
 
@@ -30,7 +30,7 @@ function getComputerChoice() {
     }
 }
 
-function gamePlay(playerSelection) {
+function playRound(playerSelection) {
     let computerSelection = getComputerChoice()
     if (playerSelection === "Paper" && computerSelection ==="Rock") {
         results.textContent = "You Win! Paper beats Rock";
