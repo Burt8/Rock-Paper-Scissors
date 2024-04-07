@@ -68,8 +68,12 @@ function playGame(playerSelection) {
     playRound(playerSelection);
     score.textContent = "Player: " + playerScore + " Computer: " + computerScore;
     if (playerScore === 5) {
+        playerScore = 0;
+        computerScore = 0;
         score.textContent = "You Win!"
     } else if (computerScore === 5) {
+        playerScore = 0;
+        computerScore = 0;
         score.textContent = "You Lost"
     }
 };
